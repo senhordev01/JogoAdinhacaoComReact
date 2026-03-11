@@ -3,8 +3,8 @@ function Jogo(){
     
     return(
       <div>
-        <section className="Jogo-Principal">//Corpo Principal
-            <div className="Layout-Jogo"> //Layout que mostra os botoes dos níveis de jogo
+        <section className="Jogo-Principal">
+            <div className="Layout-Jogo"> 
                 <div className="Modo-Jogo">
                     <button id="Nivel-Jogo">Nível Facil</button>
                     <button id="Nivel-Jogo">Nível Médio</button>
@@ -14,7 +14,7 @@ function Jogo(){
                 </div>
             </div>
 
-            <div className="Container"> //Container que armazena os elementos do jogo
+            <div className="Container">
                 <div className="Elementos-Jogo">
                     <p id="Resultado-Jogo"></p>
                     <input type="number" id="Inserir-Numero" placeholder="Digite o numero..." />
