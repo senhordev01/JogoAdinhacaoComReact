@@ -9,14 +9,14 @@ function Jogo(){
     const[Nivel_Dificil, setNivel_Dificil] = useState(0);
     const[Nivel_MuitoDificil, setNivel_MuitoDificil] = useState(0);
     const[Nivel_Impossivel, setNivel_Impossivel] = useState(0);
-    const[Inserir_Numero, setInserir_Numero]=useState(0);
+    const[Inserir_Numero, setInserir_Numero]=useState();
 
     function Jogo_Nivel_Facil(){
         setNivel_Atual("Facil");
         setNivel_Facil(Math.floor(Math.random()*10) + 1);
 
         setTimeout(()=>{
-            setMensagem("O jogo vai começar em")
+            setMensagem("O jogo vai começar em...")
         },1000);
 
         setTimeout(()=>{
@@ -41,10 +41,11 @@ function Jogo(){
 
     function Resultado_Jogo_Nivel_Facil(){
         if(Inserir_Numero === undefined){
-            setMensagem("<--Inicie o jogo primeiro-->");
+            setMensagem("<--Insira um numero primeiro-->");
             return;
         }
         if(Inserir_Numero === Nivel_Facil){
+            setMensagem("Parabens!!");
             setSituacao_Partida("Você Acertou!!");
 
         }else if(Inserir_Numero < Nivel_Facil){
@@ -62,7 +63,7 @@ function Jogo(){
         setNivel_Medio(Math.floor(Math.random()*100) + 1);
 
         setTimeout(()=>{
-            setMensagem("O jogo vai começar em")
+            setMensagem("O jogo vai começar em...")
         },1000);
         setTimeout(()=>{
             setMensagem(3);
@@ -83,10 +84,11 @@ function Jogo(){
 
     function Resultado_Jogo_Nivel_Medio(){
         if(Inserir_Numero === undefined){
-            setMensagem("<--Inicie o jogo primeiro-->");
+            setMensagem("<--Insira um numero primeiro-->");
             return;
         }
         if(Inserir_Numero === Nivel_Medio){
+            setMensagem("Parabens!!");
             setSituacao_Partida("Você Acertou!!");
 
         }else if(Inserir_Numero < Nivel_Medio){
@@ -104,7 +106,7 @@ function Jogo(){
         setNivel_Dificil(Math.floor(Math.random()*1000) + 1);
 
         setTimeout(()=>{
-            setMensagem("O jogo vai começar em")
+            setMensagem("O jogo vai começar em...")
         },1000);
         setTimeout(()=>{
             setMensagem(3);
@@ -125,10 +127,11 @@ function Jogo(){
 
     function Resultado_Jogo_Nivel_Dificil(){
         if(Inserir_Numero === undefined){
-            setMensagem("<--Inicie o jogo primeiro-->");
+            setMensagem("<--Insira um numero primeiro-->");
             return;
         }
         if(Inserir_Numero === Nivel_Dificil){
+            setMensagem("Parabens!!");
             setSituacao_Partida("Você Acertou!!");
 
         }else if(Inserir_Numero < Nivel_Dificil){
@@ -145,7 +148,7 @@ function Jogo(){
         setNivel_MuitoDificil(Math.floor(Math.random()*10000) + 1);
 
         setTimeout(()=>{
-            setMensagem("O jogo vai começar em")
+            setMensagem("O jogo vai começar em...")
         },1000);
         setTimeout(()=>{
             setMensagem(3);
@@ -166,10 +169,11 @@ function Jogo(){
 
     function Resultado_Jogo_Nivel_MuitoDificil(){
         if(Inserir_Numero === undefined){
-            setMensagem("<--Inicie o jogo primeiro-->");
+            setMensagem("<--Insira um numero primeiro-->");
             return;
         }
         if(Inserir_Numero === Nivel_MuitoDificil){
+            setMensagem("Parabens!!");
             setSituacao_Partida("Você Acertou!!");
 
         }else if(Inserir_Numero < Nivel_MuitoDificil){
@@ -186,7 +190,7 @@ function Jogo(){
         setNivel_Impossivel(Math.floor(Math.random()*100000) + 1);
 
         setTimeout(()=>{
-            setMensagem("O jogo vai começar em")
+            setMensagem("O jogo vai começar em...")
         },1000);
         setTimeout(()=>{
             setMensagem(3);
@@ -206,10 +210,11 @@ function Jogo(){
     }
     function Resultado_Jogo_Nivel_Impossivel(){
         if(Inserir_Numero === undefined){
-            setMensagem("<--Inicie o jogo primeiro-->");
+            setMensagem("<--Insira um numero primeiro-->");
             return;
         }
         if(Inserir_Numero === Nivel_Impossivel){
+            setMensagem("Parabens!!");
             setSituacao_Partida("Você Acertou!!");
 
         }else if(Inserir_Numero < Nivel_Impossivel){
@@ -229,7 +234,7 @@ function Jogo(){
         setTimeout(()=>{
             setMensagem("");
             setSituacao_Partida("");
-            setInserir_Numero(0);
+            setInserir_Numero("");
         }, 2000);
     }
 
@@ -260,33 +265,33 @@ function Jogo(){
                     Jogo_Nivel_Facil();
                     setSituacao_Partida("");
                     setMensagem("");
-                    setInserir_Numero(0);
+                    setInserir_Numero("");
                     break;
                 case "Medio":
                     Jogo_Nivel_Medio();
                     setSituacao_Partida("");
                     setMensagem("");
-                    setInserir_Numero(0);
+                    setInserir_Numero("");
                     break;
                 case "Dificil":
                     Jogo_Nivel_Dificil();
                     setSituacao_Partida("");
                     setMensagem("");
-                    setInserir_Numero(0);
+                    setInserir_Numero("");
 
                     break;
                 case "Muito Dificil":
                     Jogo_Nivel_MuitoDificil();
                     setSituacao_Partida("");
                     setMensagem("");
-                    setInserir_Numero(0);
+                    setInserir_Numero("");
 
                     break;
                 case "Impossivel":
                     Jogo_Nivel_Impossivel();
                     setSituacao_Partida("");
                     setMensagem("");
-                    setInserir_Numero(0);
+                    setInserir_Numero("");
 
                     break;
                 default:
@@ -316,7 +321,7 @@ function Jogo(){
             <div className="Container">
                 <div className="Elementos-Jogo">
                     <p id="Resultado-Jogo">{mensagem}</p>
-                    <input type="number" id="Inserir-Numero" placeholder="Digite o numero..." value={Inserir_Numero} onChange={(e)=>setInserir_Numero(Number(e.target.value))}/>
+                    <input type="number" id="Inserir-Numero" placeholder="Digite o numero..." value={Inserir_Numero} onChange={(e)=>{const valor = e.target.value; setInserir_Numero(valor === "" ? "" : Number(valor));}}/>
                     <input type="button" id="Finalizar-Jogo" value="Finalizar Jogo" onClick={Finalizar_Jogo}/>
                     <input type="button" id="Reiniciar-Jogo" value="Reiniciar Jogo" onClick={Reiniciar_Jogo}/>
                     <input type= "button" id="Enviar-Numero" value="Enviar" onClick={Enviar_Jogo} />
