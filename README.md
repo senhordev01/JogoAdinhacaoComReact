@@ -13,7 +13,7 @@ Este projeto é um jogo de adivinhação feito com React onde o jogador precisa 
 - JavaScript
 
 ## Como Iniciar o Projeto
-- git clone https://github.com/senhordev01/JogoAdinhacaoComReact.git
+- git clone https://github.com/senhordev01/JogoAdivinhacaoComReact.git
 - cd JogoAdivinhacao
 - npm install
 - npm run dev
