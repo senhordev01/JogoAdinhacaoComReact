@@ -1,4 +1,4 @@
-# JogoAdinhacaoComReact
+# JogoAdivinhacaoComReact
 
 Este projeto é um jogo de adivinhação feito com React onde o jogador precisa descobrir um número gerado aleatoriamente.
 
